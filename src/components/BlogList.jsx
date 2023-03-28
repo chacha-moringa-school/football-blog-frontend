@@ -19,9 +19,9 @@ const BlogList = () => {
                 blogs.map((blog)=>{
                    return(
                     <div key={blog.id} className="card m-3 p-3 text-bg-dark shadow" style={{maxWidth: "80vw", height: "18rem"}}>
-                      <div class="row g-0">
-                            <div class="col-md-4">
-                            <img src={blog.image_url} className="img-fluid rounded-start" alt="photo"/>
+                        <div className="row g-0">
+                            <div className="col-md-4">
+                                <img src={blog.image_url} className="img-fluid rounded-start" alt="photo"/>
                             </div>
                             <div className="col-md-8">
                             <div className="card-body">
