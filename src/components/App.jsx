@@ -1,4 +1,5 @@
 import '../styles/App.css';
+import BlogList from './BlogList';
 import Navbar from './Navbar';
 
 function App() {
@@ -7,6 +8,9 @@ function App() {
       <header className="App-header">
         <Navbar />
       </header>
+      <div className='container'>
+        <BlogList />
+      </div>
     </div>
   );
 }
