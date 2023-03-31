@@ -3,12 +3,11 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer>
-      <nav className="navbar navbar-expand-lg navbar-dark  bg-dark">
-          <div className="container-fluid">
-              <p>Copyright © 2023</p>
-              <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
+    <footer className="text-center">
+      <nav className="navbar navbar-expand-lg navbar-dark text-center  bg-dark" style={{height: "5rem"}}>
+          <div className="container-fluid text-center">
+              <div className="collapse navbar-collapse text-center">
+                <ul className="navbar-nav me-auto mb-2 mb-lg-0  text-center">
 
                     <li className="nav-item">
                         <NavLink className="nav-link active " aria-current="page" to="/terms">Terms of Use</NavLink>

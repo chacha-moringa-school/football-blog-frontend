@@ -37,7 +37,113 @@
   }
 } */
 
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
 body {
   background-color: black;
   color: whitesmoke;
+}
+
+.no-gutters{
+  /* background: white; */
+  border-radius: 30px;
+}
+
+.login-img{
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.login-btn{
+  border: none;
+  outline: none;
+  height: 3rem;
+  width: 100%;
+  background-color: white;
+  color: black;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.login-btn:hover{
+  background-color: black;
+  border: 1px solid;
+  color: white;
+}
+
+
+.reg-cont{
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+}
+
+.reg-cont .reg-title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6)
+}
+
+.reg-cont .reg-title::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+.reg-cont form .reg-user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6)
+}
+
+form .reg-user-details .reg-input-box{
+  margin-bottom: 15px;
+  width: calc(100% / 2 -20px);
+}
+
+.reg-user-details .reg-input-box .reg-details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.reg-user-details .reg-input-box input{
+  height: 45px;
+  width: 100%;
+  /* outline: none; */
+  border-radius: 5px;
+  border: 10px #0f0e0e;
+  padding-left: 15px;
+  font-size: 16px;
+  border-bottom-width: 2px;
+  transition: all 0.5s ease;
+}
+
+.reg-user-details .reg-input-box input:focus,
+.reg-user-details .reg-input-box input:valid{
+  border-color: #9b59b6;
+}
+
+form .reg-button{
+  height: 45px;
+  margin: 45px 0;
+}
+
+form .reg-button input{
+  height: 100%;
+  width: 100%;
 }
