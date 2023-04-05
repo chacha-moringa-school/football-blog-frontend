@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 function LoginForm({setUserSignedIn}) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const navigate = useNavigate()
   
     
 
@@ -23,6 +25,7 @@ function LoginForm({setUserSignedIn}) {
     .then((res)=> {
         if(res.ok){
             res.json().then((user)=>{
+                navigate('/blogs', { replace: true })
                 setUserSignedIn(user)
             })
         } else{

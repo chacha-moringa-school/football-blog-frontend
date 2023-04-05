@@ -49,7 +49,7 @@ function App() {
         {userSignedIn ? (
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/blogs' element={<BlogList />} />
+          <Route path='/blogs' element={<BlogList userSignedIn={userSignedIn} />} />
           <Route path='/create' element={<CreateBlog />} />
           <Route path="/blogs/:id" element={<BlogDetails userSignedIn={userSignedIn} />}/>
           <Route path='/terms' element={<TermsOfUse />} />
@@ -61,7 +61,7 @@ function App() {
       ) : (
         <Routes>
             <Route path='/' element={<Home />} />
-            <Route path='/blogs' element={<BlogList />} />
+            <Route path='/blogs' element={<BlogList userSignedIn={userSignedIn} />} />
             <Route path='/login' element={ <LoginForm userSignedIn={userSignedIn} setUserSignedIn={setUserSignedIn} />} />
             <Route path='/signup' element={ <SignUp setUserSignedIn={setUserSignedIn} />}/>
             <Route path='/terms' element={<TermsOfUse />} />

@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from 'react-router-dom';
+import { FaHeart } from 'react-icons/fa';
 import axios from 'axios';
 
-const BlogList = () => {
+const BlogList = ({userSignedIn}) => {
     const [blogs, setBlogs] = useState([])
     const [likedBlogIds, setLikedBlogIds] = useState([]);
     const [comment, setComment] = useState('');
@@ -48,15 +49,16 @@ const BlogList = () => {
                                 </div>
                                 <div className="col-md-8">
                                     <div className="card-body">
-                                        <h5 className="card-title">{blog.title}</h5>
+                                        <h4 className="card-title" style={{color: "#f1356d"}}>{blog.title}</h4>
                                         <p className="card-text">{blog.news.substring(0, 250)}...</p>
                                         <p className="card-text"><small>Last updated {blog.updated_at_formatted}</small></p>
-                                        <button onClick={() => {
-                                                                navigate(`/blogs/${blog.id}`);
-                                                            }} className="btn btn-info">Details</button>
-                                        <button onClick={()=>{navigate('/likes')}}>Likes {blog.total_likes}</button>
-                                        {/* <button onClick={()=>{navigate('/comments')}}>Comments</button> */}
-
+                                        <div className="d-flex justify-content-between">
+                                            <button onClick={() => {
+                                                                    userSignedIn? (navigate(`/blogs/${blog.id}`)) : (navigate(`/login`))   
+                                                                }} className="btn btn-info">More...</button>
+                                            <p className="h2">❣️ {blog.total_likes}</p>
+                                            {/* <button onClick={()=>{navigate('/comments')}}>Comments</button> */}
+                                        </div>
                                     </div>
                                 </div>
                             </div>

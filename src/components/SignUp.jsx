@@ -32,7 +32,8 @@ function SignUp({setUserSignedIn}) {
   };
 
   return (
-    <div className="container reg-cont" style={{minHeight: "100vh"}}>
+    <div className="container" style={{minHeight: "100vh"}}>
+    <div className="container reg-cont mt-5" >
         <div className="reg-title">User Registration</div>
         <form onSubmit={handleSubmit}>
             <div className="reg-user-details">
@@ -72,6 +73,7 @@ function SignUp({setUserSignedIn}) {
             </div>
         </form>
 
+    </div>
     </div>
   );
 }
