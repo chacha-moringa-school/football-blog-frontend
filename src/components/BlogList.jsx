@@ -45,13 +45,14 @@ const BlogList = ({userSignedIn}) => {
                     <div key={blog.id} className="card m-3 p-3 text-bg-dark shadow" style={{maxWidth: "80vw", height: "18rem"}}>
                             <div className="row g-0">
                                 <div className="col-md-4" style={{maxHeight: "15rem"}}>
-                                    <img src={blog.image_url} className="img-fluid rounded-start" alt="photo"/>
+                                    <img src={blog.image_url} className="img-fluid rounded-start" alt="photo" style={{height: "100%", width: "100%", objectFit: "cover"}} />
                                 </div>
                                 <div className="col-md-8">
                                     <div className="card-body">
                                         <h4 className="card-title" style={{color: "#f1356d"}}>{blog.title}</h4>
                                         <p className="card-text">{blog.news.substring(0, 250)}...</p>
-                                        <p className="card-text"><small>Last updated {blog.updated_at_formatted}</small></p>
+                                        <p className="card-text d-flex justify-content-between"><small>Last updated {blog.updated_at_formatted}</small> <small>Author: {blog.user.username}</small></p>
+                                        
                                         <div className="d-flex justify-content-between">
                                             <button onClick={() => {
                                                                     userSignedIn? (navigate(`/blogs/${blog.id}`)) : (navigate(`/login`))   

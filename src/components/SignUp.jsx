@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function SignUp({setUserSignedIn}) {
   const [first_name, setFirstName] = useState('');
@@ -8,6 +9,8 @@ function SignUp({setUserSignedIn}) {
   const [bio, setBio] = useState('');
   const [email, setEmail] = useState('');
 
+
+  const navigate = useNavigate()
   const [login, setLogin] = useState('')
   const [errors, setErrors] = useState([])
 
@@ -23,6 +26,7 @@ function SignUp({setUserSignedIn}) {
         body: JSON.stringify(signUpDetails)
     }).then((res)=> {
         if(res.ok){
+            navigate('/blogs', { replace: true })
             res.json().then(setUserSignedIn)
         } else {
             res.json().then(e => setErrors(Object.entries(e.error).flat()))

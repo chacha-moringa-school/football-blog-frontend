@@ -14,6 +14,7 @@ import Likes from "./Likes";
 import LoginForm from "./LoginForm";
 import Navbar from './Navbar';
 import SignUp from "./SignUp";
+import EditBlogForm from "./UpdateBlog";
 
 function App() {
   const [userSignedIn, setUserSignedIn] = useState(false);
@@ -55,6 +56,7 @@ function App() {
           <Route path='/terms' element={<TermsOfUse />} />
           <Route path='/privacy' element={<PrivacyPolicy />} />
           <Route path='/cookies' element={<CookiePolicy />} />
+          <Route path='/blogs/:id/update' element={<EditBlogForm />} />
           <Route path='/likes' element={ <Likes />} />
           <Route path = '/comments' element={<Comments />} />
         </Routes>

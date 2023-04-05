@@ -74,8 +74,9 @@ const BlogDetails = ({userSignedIn}) => {
         })
         .then((res)=>{
             if(!res.ok){
-                alert("Unauthorised!! Only the owner of this blog can edit or delete it!!")
+                alert("Unauthorised!! Only the owner of this blog can delete it!!")
             } else {
+                alert("Successfully Deleted")
                 navigate('/blogs')
                 return res.json()
                 .then((data)=>{console.log(data)})  
@@ -93,11 +94,12 @@ const BlogDetails = ({userSignedIn}) => {
                     <h2 className="card-title">{blog.title}</h2>
                     <p className="card-text">{blog.news}</p>
                     <p className="card-text"><small>Last updated {blog.updated_at_formatted}</small></p>
+                    {/* <small>Author: {blog.user.username}</small> */}
                 </div>
             </div>
-            <button  onClick={()=> handleLike(blog.id, userSignedIn.id)} >Like </button>
+            <button className="mt-3" onClick={()=> handleLike(blog.id, userSignedIn.id)} >Like </button>
             <div className="mt-5">
-                <button className="me-5 btn btn-primary">Edit</button>
+                <button className="me-5 btn btn-primary" onClick={()=> navigate(`/blogs/${blog.id}/update`)} >Edit</button>
                 <button onClick={handleDeleteBlog} className="ms-5 btn btn-danger">Delete</button>
             </div>
             
