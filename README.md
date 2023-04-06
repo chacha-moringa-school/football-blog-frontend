@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Dimblogs
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This app will contain a collection of all the latest football blogs. The purpose of this app is to allow users to create their own content.
 
-## Available Scripts
+Users are able to create, update, and delete their own blogs. A user can also like another blog.
 
-In the project directory, you can run:
+Users are able to see all the blogs, however, if they want to see the full details they must log in.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+To run this application:
 
-### `npm test`
+- Clone the repository from https://github.com/chacha-moringa-school/football-blog-frontend. If incase you see a 404, in the page when trying to clone, kindly ask me to add you to the repository as a contributor.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Usage
 
-### `npm run build`
+```javascript
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Once you clone run npm install, the run npm start the page should be up and running
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. When the page goes live, you view the home page. The homepage has a caraousel section with a little information. The blogs page contains a list a of all the blogs from the app. A user can go through each of them and once you get the blog of your choice, click on the more button and see the full details.
+.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
 
-### `npm run eject`
+## Help
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Incase of any problems reach out through the contact links below.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Authors
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Emmanuel Chacha
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contributing
 
-### Code Splitting
+Pull requests are welcome. For major changes, please open an issue first
+to discuss what you would like to change.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Please make sure to update tests as appropriate.
 
-### Analyzing the Bundle Size
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Copyright (c) 2023 All rights reserved
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+All rights reserved. This project is licensed under the terms of the [MIT](https://choosealicense.com/licenses/mit/) license.
