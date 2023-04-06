@@ -23,6 +23,10 @@ To run this application:
 .
 
 ```
+## User Journey
+- A user can be able to sign up and create their own blogs
+- A user can be able to like other blogs only once
+- A user can only be able to edit or delete blogs that they have created
 
 ## Help
 
